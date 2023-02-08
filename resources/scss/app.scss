@@ -1,8 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
-
+// navbar
 .navbar {
-    background-color: antiquewhite !important;
-    font-size: 28px;
+    background-color: #3d0083 !important;
+    font-size: 22px;
+
+    .nav-item {
+        a {
+            color: white;
+        }
+
+        .dropdown-item {
+            color: #3d0083;
+        }
+    }
 
     .navbar-brand {
         img {
@@ -10,12 +20,98 @@
         }
     }
 }
-
+// footer
 .ms_footer {
-    background-color: antiquewhite;
+    color: white;
+    background-color: #3d0083;
     padding-top: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+}
+// admin cards
+.card_container {
+    margin: 0 auto;
+    width: 80%;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    .card {
+        width: 300px;
+        min-height: 400px;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: 0.5s;
+
+        &:hover {
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+
+            .img {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h2 {
+                font-size: 20px;
+                color: #262626;
+                margin: 20px auto;
+
+                span {
+                    font-size: 14px;
+                    background: #7d6df1;
+                    color: #fff;
+                    display: inline-block;
+                    padding: 4px 10px;
+                    border-radius: 15px;
+                }
+            }
+        }
+        p {
+            color: #262626;
+        }
+
+        span {
+            display: inline-flex;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+                float: left;
+
+                a {
+                    display: block;
+                    color: #aaa;
+                    margin: 0 10px;
+                    font-size: 20px;
+                    transition: 0.5s;
+                    text-align: center;
+
+                    &:hover {
+                        color: #7d6df1;
+                        transform: rotateY(360deg);
+                    }
+                }
+            }
+        }
+    }
 }
