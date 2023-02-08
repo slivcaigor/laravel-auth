@@ -10,4 +10,13 @@ class MainController extends Controller
 
         return view('pages.home');
     }
+
+    public function loggedAdmin() {
+
+        if (auth()->user()->email !== 'slivcaigor@gmail.com') {
+            return redirect()->back();
+        } else {
+            return view('pages.admin');
+        }
+            }
 }
