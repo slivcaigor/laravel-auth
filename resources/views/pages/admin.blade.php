@@ -2,6 +2,8 @@
 
 @section('content')
 
-<h1>ADMIN PAGE</h1>
+<main class="text-center ms_admin-content">
+  <h1>ADMIN PAGE</h1>
+</main>
 
 @endsection
