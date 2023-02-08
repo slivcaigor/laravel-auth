@@ -17,6 +17,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url('/admin') }}">{{ __('Admin') }}</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/projects') }}">{{ __('Projects') }}</a>
+            </li>
           </ul>
 
           <!-- Right Side Of Navbar -->

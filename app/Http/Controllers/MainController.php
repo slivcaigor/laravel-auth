@@ -11,6 +11,11 @@ class MainController extends Controller
         return view('pages.home');
     }
 
+    public function projects() {
+
+        return view('pages.projects');
+    }
+
     public function loggedAdmin() {
 
         if (auth()->user()->email !== 'slivcaigor@gmail.com') {
