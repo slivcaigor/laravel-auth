@@ -16,6 +16,12 @@ Route :: get('/project/show/{project}', [MainController :: class, 'projectShow']
 Route :: get('/project/delete/{project}', [MainController :: class, 'projectDelete'])
     -> name('project.delete');
 
+Route :: get('/project/create', [MainController :: class, 'projectCreate'])
+    -> name('project.create');
+
+Route :: post('/project/store', [MainController :: class, 'projectStore'])
+    -> name('project.store');
+
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');

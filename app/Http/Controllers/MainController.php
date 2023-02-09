@@ -42,4 +42,35 @@ class MainController extends Controller
     
         return redirect() -> route('admin');
     }
+
+    // create
+    public function projectCreate() {
+
+        return view('pages.projectCreate');
+    }
+
+    // store
+    public function projectStore(Request $request) {
+
+        $data = $request -> validate([
+            'name' => 'required|string|max:64',
+            'description' => 'nullable|string',
+            'main_image' => 'string',
+            'release_date' => 'date',
+            'repo_link' => 'string',
+        ]);
+    
+        $project = new Project();
+    
+        $project -> name = $data['name'];
+        $project -> description = $data['description'];
+        $project -> main_image = $data['main_image'];
+        $project -> release_date = $data['release_date'];
+        $project -> repo_link = $data['repo_link'];
+
+    
+        $project -> save();
+    
+        return redirect() -> route('admin');
+    }
 }

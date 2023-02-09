@@ -3,6 +3,9 @@
 @section('content')
     
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h1 class="text-center"><a href="{{ route('project.create') }}">Add New Project</a></h1>
+
 <div class="card_container d-flex gap-4 justify-content-center mt-5">
 
     @foreach ($projects as $project)
