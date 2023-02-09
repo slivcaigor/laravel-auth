@@ -10,7 +10,10 @@
 
     @foreach ($projects as $project)
     <div class="card">
-      <div class="delete_btn">
+      <div class="d-flex justify-content-between mx-2">
+        <a href="{{ route('project.edit', $project) }}">
+            EDIT
+        </a>
         <a href="{{ route('project.delete', $project) }}">DELETE</a>
       </div>
     <a href="{{ route('project.show', $project) }}">

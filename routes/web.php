@@ -22,6 +22,12 @@ Route :: get('/project/create', [MainController :: class, 'projectCreate'])
 Route :: post('/project/store', [MainController :: class, 'projectStore'])
     -> name('project.store');
 
+Route :: get('/project/edit/{project}', [MainController :: class, 'projectEdit'])
+    -> name('project.edit');
+
+Route :: post('/project/update/{project}', [MainController :: class, 'projectUpdate'])
+    -> name('project.update');
+
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
