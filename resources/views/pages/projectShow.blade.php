@@ -32,15 +32,4 @@
 	</section>
 
 
-{{--     
-    <h1>Task: {{ $project -> name }}</h1>
-    <h2>Priority: {{ $project -> priority }}/10</h2>
-    <span>
-        {{ 
-            $project -> description 
-            ? $project -> description 
-            : "- no description -"
-        }}
-    </span> --}}
-
 @endsection

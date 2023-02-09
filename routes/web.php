@@ -6,13 +6,15 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController :: class, 'home']);
 
-Route::get('/admin', [MainController :: class, 'loggedAdmin']) -> middleware(['auth', 'verified']) -> name('admin');
+Route::get('/admin', [MainController :: class, 'admin']) -> middleware(['auth', 'verified']) -> name('admin');
 
 Route::get('/projects', [MainController :: class, 'projects']);
 
 Route :: get('/project/show/{project}', [MainController :: class, 'projectShow'])
     -> name('project.show');
 
+Route :: get('/project/delete/{project}', [MainController :: class, 'projectDelete'])
+    -> name('project.delete');
 
 
 Route::get('/dashboard', function () {

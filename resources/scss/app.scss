@@ -83,6 +83,15 @@ body {
             box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
         }
 
+        .delete_btn {
+            margin-left: auto;
+            a {
+                color: red;
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+
         .box {
             position: absolute;
             top: 50%;
