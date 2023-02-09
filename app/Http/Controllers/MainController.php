@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -13,15 +13,23 @@ class MainController extends Controller
 
     public function projects() {
 
-        return view('pages.projects');
+        $projects = Project :: all();
+
+        return view('pages.projects', compact('projects'));
     }
 
     public function loggedAdmin() {
 
         if (auth()->user()->email !== 'slivcaigor@gmail.com') {
-            return redirect()->back();
+            return redirect('/');
         } else {
             return view('pages.admin');
         }
             }
+
+    // show
+    public function projectShow(Project $project) {
+
+        return view('pages.projectShow', compact('project'));
+    }
 }

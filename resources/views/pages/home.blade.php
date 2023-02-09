@@ -4,7 +4,7 @@
 
 @section('content')
 
-<main>
+<main class="my-5">
     <div id="carousel">
       <div class="prevLeftSecond">
         <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">

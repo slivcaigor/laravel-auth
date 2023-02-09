@@ -8,7 +8,11 @@ Route::get('/', [MainController :: class, 'home']);
 
 Route::get('/admin', [MainController :: class, 'loggedAdmin']) -> middleware(['auth', 'verified']) -> name('admin');
 
-Route::get('/projects', [MainController :: class, 'projects']) -> middleware(['auth', 'verified']) -> name('projects');
+Route::get('/projects', [MainController :: class, 'projects']);
+
+Route :: get('/project/show/{project}', [MainController :: class, 'projectShow'])
+    -> name('project.show');
+
 
 
 Route::get('/dashboard', function () {
