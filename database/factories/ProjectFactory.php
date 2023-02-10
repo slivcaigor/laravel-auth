@@ -18,9 +18,7 @@ class ProjectFactory extends Factory
     {
         return [
             'name' => fake() -> unique() -> words(rand(1, 5), true) ,
-            'description' => fake() -> boolean()
-                            ? fake() -> paragraph()
-                            : null,
+            'description' => fake() -> paragraph(),
             // 'main_image' => null,
             'release_date' => fake() -> dateTimeBetween('-6 month', 'now'),
             'repo_link' => fake() -> unique() -> url(),

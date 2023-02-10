@@ -4,22 +4,22 @@
     
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<h1 class="text-center"><a href="{{ route('project.create') }}">Add New Project</a></h1>
+<h1 class="text-center"><a href="{{ route('admin.project.create') }}">Add New Project</a></h1>
 
 <div class="card_container d-flex gap-4 justify-content-center mt-5">
 
     @foreach ($projects as $project)
     <div class="card">
       <div class="d-flex justify-content-between mx-2">
-        <a href="{{ route('project.edit', $project) }}">
+        <a href="{{ route('admin.project.edit', $project) }}">
             EDIT
         </a>
-        <a href="{{ route('project.delete', $project) }}">DELETE</a>
+        <a href="{{ route('admin.project.delete', $project) }}">DELETE</a>
       </div>
     <a href="{{ route('project.show', $project) }}">
             <div class="box">
                 <div class="img">
-                    <img src="{{ $project -> main_image }}">
+                    <img src="{{ asset('storage/' . $project -> main_image) }}">
                 </div>
                 <h2>
                     <br>

@@ -4,16 +4,16 @@
     
 <div class="container text-light text-center">
   <h1>New project</h1>
-  <form method="POST" action="{{ route('project.store') }}">
+  <form method="POST" action="{{ route('admin.project.store') }}" enctype="multipart/form-data">
       @csrf
       <label for="name">Name</label>
       <input type="text" name="name">
       <br>
       <label for="description">Description</label>
-      <input type="text" name="description">
+      <textarea type="text" name="description"></textarea>
       <br>
       <label for="main_image">Main image</label>
-      <input type="text" name="main_image">
+      <input type="file" name="main_image">
       <br>
       <label for="release_date">Release Date</label>
       <input type="date" name="release_date">

@@ -7,7 +7,7 @@
 	<div class="container py-4">
 		<article class="postcard dark blue">
 			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+				<img class="postcard__img" src="{{ asset('storage/' . $project -> main_image) }}" alt="Image Title" />
 			</a>
 			<div class="postcard__text">
 				<h1 class="postcard__title blue">{{ $project -> name }}</h1>
